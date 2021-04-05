@@ -40,13 +40,15 @@ func matrix(i: Int) -> Bool {
 
 print(foo(array: numbers, closure: matrix))
 // Result:
-
+//[1, 5, 7, 3, 3]
 
 // --------- 3 task
 
 let myStat = (pushup: 10, pullup: 5, situp: 15)
 print("pushup: \(myStat.pushup), pullup: \(myStat.1), situp:\(myStat.situp)")
 // Result:
+//pushup: 10, pullup: 5, situp:15
+
 
 // --------- 4 task
 
