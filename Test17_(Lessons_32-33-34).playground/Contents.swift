@@ -42,6 +42,10 @@ class Object {
         }
         print("Значение \" Hard Disk \" уже есть")
     }
+    
+    func printDescriptionGlobalClass(){
+        print(" Functionality of PC: - \(functionalOfPc!), basic parameters of computer: - \(computer!), hard disk parameters: - \(hardDisk!) ")
+    }
 }
 
 class Computer {
@@ -49,6 +53,10 @@ class Computer {
 
     func process () -> () {
         print("I help for developers in their learning and working practice")
+    }
+    func printDescriptionOfComputer() -> String{
+//        print(" Name of computer: \(name) ")
+        return (name)
     }
 }
 
@@ -98,6 +106,10 @@ class SummaryFunctionality {
         }
         print("Значение \" Central Processor \" уже есть")
     }
+    
+    func printDescriptionOfSummaryFunctionality(){
+        print(" RAM parameters: - \(ramOfPc!), graphics card parameters: - \(graphicsCard!), hard disk parameters: - \(hardDisk!), central processor parameters: - \(centralProcessor!) ")
+    }
 }
 
 class RAM {
@@ -105,6 +117,9 @@ class RAM {
     
     func showParamOfRam () -> String {
        return("This machine has \(quantityOfRam) RAM.")
+    }
+    func printDescriptionOfRam(){
+        print(" Quantity of RAM: \(quantityOfRam) ")
     }
 }
 
@@ -114,6 +129,9 @@ class Graphic {
     func showParamOfGraphic () -> String {
        return("This machine has \(graphicsCard) graphics params.")
     }
+    func printDescriptionOfGraphicsCard(){
+        print(" Graphics card: \(graphicsCard) ")
+    }
 }
 
 class HardDisk {
@@ -122,6 +140,9 @@ class HardDisk {
     func showParamOfHardDisk () -> String {
        return("This machine has \(sizeOfHard) hard disk params.")
     }
+    func printDescriptionOfHardDisk(){
+        print(" Params of hard disk: \(sizeOfHard) ")
+    }
 }
 
 class CentralProcessor {
@@ -129,6 +150,9 @@ class CentralProcessor {
     
     func showParamOfCentralProcessor () -> String {
        return("This machine has \(informationOfCpu) central processor params.")
+    }
+    func printDescriptionOfCentralProcessor(){
+        print(" Params of central processor: \(informationOfCpu) ")
     }
 }
 
@@ -143,6 +167,7 @@ newPC.checkPropertyComputer()
 newPC.checkPropertyHardDisk()
 newPC.checkPropertyFunctionalOfPc()
 newPC.functionalOfPc?.checkPropertyGraphicsCard()
+//newPC.printDescriptionGlobalClass()
 
 // добавление нового объекта типа Computer
 var arrayOfPC = newPC.computer
@@ -165,18 +190,27 @@ print(showDisplayDataOfHard!)
 // добавление нового объекта типа HardDisk
 var arrayOfHardDisk = somePC.hardDisk
 arrayOfHardDisk?.append(HardDisk())
+
+
 arrayOfHardDisk
 
 // мои личные эксперименты
 // создать массив из двух ранее созданных, перебрать его и вывести на екран
 
 // добавляем массив с двух жестких дисков в массив с нашим Computer
-var createComputer: [Any] = []
+//var createComputer: [Any] = []
+//createComputer.append(arrayOfHardDisk as Any)
+//createComputer.append(arrayOfPc as Any)
+
+var createComputer = [Any]()
 createComputer.append(arrayOfHardDisk as Any)
 createComputer.append(arrayOfPC as Any)
 
-//for i in createComputer {
-//    for i in ..
+
+//for items in createComputer {
+//    for item in items {
+//        print(item)
+//    }
 //}
 
 //var createComputer = Array (zip(arrayOfPC!, arrayOfHardDisk!))
